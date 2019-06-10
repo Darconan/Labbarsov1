@@ -1,0 +1,21 @@
+<!DOCTIPEhtml>
+	<html>
+		<head>
+			<meta charset = "UTF8"/>
+			<title>  </title>
+		</head>
+
+		<h2>POST homework</h2>
+		<form method="post" action="/add_message">
+			<input type="text" name="text" >
+			<input type="text" name="description">
+			<button type="submit" >Add new homework </button>
+		</form>
+
+		<h3>home task</h3>
+		{%for message in messages
+		<div> <b>{{message.text}}</b> &nbsp; {{message.description}} </div>
+		{% endfor %}
+
+		</body>
+	</html>
